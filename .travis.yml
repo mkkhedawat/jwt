@@ -5,10 +5,6 @@ node_js:
 script:
   - npm install
   - npm run build
-  - rm -rf data .travis.yml .gitignore
-  - mv build/css .
-  - mv build/js .
-  - mv build/index.html .
 
 deploy:
   provider: pages
