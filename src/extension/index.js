@@ -1,7 +1,7 @@
 import {
   setupTokenEditor,
   setTokenEditorValue,
-  getTokenEditorValue
+  getTokenEditorValue,
 } from "../editor";
 import { setupTokenPageInspector } from "./page-inspector.js";
 import { shareJwtLink, shareJwtTextElement } from "./dom-elements.js";
@@ -20,4 +20,4 @@ function loadFromClipboardIfPossible() {
 setupTokenEditor();
 loadFromClipboardIfPossible();
 setupTokenPageInspector();
-setupShareJwtButton(shareJwtLink, shareJwtTextElement);
+// setupShareJwtButton(shareJwtLink, shareJwtTextElement);

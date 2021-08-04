@@ -14,7 +14,7 @@ import {
   ebookSection,
   shareJwtButton,
   shareJwtTextElement,
-  librariesElement
+  librariesElement,
 } from "./dom-elements.js";
 
 import queryString from "querystring";
@@ -30,7 +30,7 @@ function parseLocationQuery() {
     "access_token",
     "value",
     "token",
-    "debugger-io?token"
+    "debugger-io?token",
   ];
   for (const key of keys) {
     const token = locSearch[key] || locHash[key];
@@ -50,12 +50,12 @@ function parseLocationQuery() {
 }
 
 // Initialization
-setupNavbar();
+// setupNavbar();
 // setupExtensionButton();
-setupSmoothScrolling();
-setupLibraries();
+// setupSmoothScrolling();
+// setupLibraries();
 setupTokenEditor();
-parseLocationQuery();
+// parseLocationQuery();
 setupHighlighting();
-setupJwtCounter();
-setupShareJwtButton(shareJwtButton, shareJwtTextElement);
+// setupJwtCounter();
+// setupShareJwtButton(shareJwtButton, shareJwtTextElement);

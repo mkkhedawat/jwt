@@ -1,11 +1,24 @@
 language: node_js
 node_js:
-    - "stable"
-before_script:
-    - echo "Host github.com" >> ~/.ssh/config
-    - echo "  StrictHostKeyChecking no" >> ~/.ssh/config
-    - echo "  CheckHostIP no" >> ~/.ssh/config
-    - npm install
-#cache:
-#  directories:
-#  - node_modules
+  - 12
+
+script:
+  - npm install
+  - npm run build
+  - rm -rf data .travis.yml .gitignore
+  - mv build/css .
+  - mv build/js .
+  - mv build/index.html .
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: false
+  local_dir: ./dist/website
+  on:
+    branch: master
+
+branches:
+  only:
+    - master

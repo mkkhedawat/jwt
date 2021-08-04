@@ -1,12 +1,8 @@
 section#debugger-io.debugger-jwt
   .container
     //- a(name='debugger')
-    h1 Debugger
+    h1 JWT Debugger
     .jwt-playground
-      .warning
-        strong Warning:
-        |  JWTs are credentials, which can grant access to resources. Be careful where you paste them! We do not record tokens, all validation and debugging is done on the client side.
-
       .selections
         .algorithm
           label(for='algorithm-select') Algorithm
@@ -19,5 +15,4 @@ section#debugger-io.debugger-jwt
           .col-xs-6.website-validation
             include ../token-editor-validation.pug
           .col-xs-6.website-share
-            button.btn
-              span SHARE JWT
+            
